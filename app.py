@@ -7,6 +7,7 @@ from langchain.vectorstores import FAISS
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
+from htmlTemplates import css, bot_template, user_template
 
 
 def get_pdf_text(pdf_docs):
@@ -49,12 +50,17 @@ def get_conversation_chain(vectorstore):
 def main():
     load_dotenv()
     st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
+    st.write(css, unsafe_allow_html=True)
 
     if "conversation" not in st.session_state:
         st.session_state.converation = None
 
     st.header("Chat with multiple PDFs :books:")
     st.text_input("Ask a question about your documents:")
+
+    st.write(user_template.replace("{{MSG}}", "Hello Bot"), unsafe_allow_html=True)
+    st.write(bot_template.replace("{{MSG}}", "Hello Human"), unsafe_allow_html=True)
+
 
     with st.sidebar:
         st.subheader("Your documents")

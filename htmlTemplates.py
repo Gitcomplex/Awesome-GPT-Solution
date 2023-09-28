@@ -28,7 +28,7 @@ css = '''
 bot_template = '''
 <div class="chat-message bot">
     <div class="avatar">
-        <img src="Images\bot_icon.png">
+        <img src="https://yamiyu.blob.core.windows.net/images/bot_icon.png?sp=r&st=2023-09-28T09:12:05Z&se=2023-09-28T17:12:05Z&sv=2022-11-02&sr=b&sig=CCEOpJVnFHEAd6qtUY%2F41qO%2BqJz5xAJ0O03qd%2B9IlvE%3D">
     </div>
     <div class="message">{{MSG}}</div>
 </div>
@@ -37,7 +37,7 @@ bot_template = '''
 user_template = '''
 <div class="chat-message user">
     <div class="avatar">
-        <img src="Images\user_icon.jpg">
+        <img src="https://yamiyu.blob.core.windows.net/images/user_icon.jpg?sp=r&st=2023-09-28T09:15:10Z&se=2023-09-28T17:15:10Z&sv=2022-11-02&sr=b&sig=KMwJxLTTwsTKVH5NZeh6aTDYT%2FgFZZdUcXhPpSkNDiY%3D">
     </div>    
     <div class="message">{{MSG}}</div>
 </div>
